@@ -1,0 +1,8 @@
+<!--pages/welcome/welcome.wxml-->
+<view class="container">
+  <image class="avatar" src="/images/avatar.jpg"></image>
+  <text class="welcome">hello world</text>
+  <view class="entrance">
+    <text>进入一点资讯</text>
+  </view>
+</view>
