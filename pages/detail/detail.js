@@ -1,26 +1,25 @@
-// pages/posts/posts.js
-import mockData from '../../data/postsData'
+// pages/detail/detail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    display: true
+    isShow:true
   },
-  togglePage:function(){
-    wx.navigateTo({
-      url: '/pages/detail/detail',
+  collection:function(){
+    this.setData({
+      isShow:!isShow
     })
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      mockData
-    })
+    // wx.setStorage({
+    //   data: data,
+    //   key: 'key',
+    // })
   },
 
   /**

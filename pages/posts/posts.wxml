@@ -1,4 +1,5 @@
 <!--pages/posts/posts.wxml-->
+<import src="../posts/posts_item/post_item_template.wxml" />
 <view class='container'>
   <swiper class="swiper_container" 
   autoplay="true"
@@ -19,25 +20,8 @@
     </swiper-item>
   </swiper>
   <!-- 新闻列表 -->
-  <block wx:for="{{post_content}}"  wx:for-index="news_id" wx:for-item="news_item">
-    <view wx:if="{{display}}" class="detail">
-    <!-- 作者信息 -->
-      <view class="userInfo">
-        <image class="posts_ava" src="/images/posts_ava.jpg"></image>
-        <text wx:if="{{display}}" class="posts_date">{{news_item.date}}</text>
-      </view>
-      <text class="posts_title">{{news_item.title}}</text>
-      <!-- 图片 -->
-      <image class="posts_img" src="{{news_item.img.post_img}}"></image>
-      <!-- 正文 -->
-      <text class="posts_con" selectable="true" space="true">{{news_item.view_content}}</text>
-      <!-- 点赞、观看 -->
-      <view class="star_view">
-        <text class="iconfont icon-xianxingshuangshuidi"></text>
-        <text>{{news_item.collect_num}}</text>
-        <text class="iconfont icon-xianxingxishou"></text>
-        <text>{{news_item.view_num}}</text>
-      </view>
-    </view>
+  <block wx:for="{{mockData}}"  wx:for-index="news_id" wx:for-item="mockData" wx:key="news_id">
+  <!-- 做template是为了其他页面也可以引用 -->
+    <template is="postItem" data="{{mockData}}"></template>
   </block>
 </view>

@@ -1,0 +1,62 @@
+/* pages/detail/detail.wxss */
+.detail_img{
+  width: 100%;
+  height: 200px;
+}
+.music{
+  position:absolute;
+  left: 50%;
+  top: 100px;
+  transform: translate(-50%,-50%);
+}
+.w{
+  padding: 10px;
+}
+.userInfo{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: pink;
+}
+.avatar{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.userName{
+  padding:0 10px;
+}
+.postedTime{
+  padding-left: 10px;
+}
+.title{
+  padding-left: 20px;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+.function_area{
+  position:relative;
+}
+.line{
+  position:absolute;
+  width: 700rpx;
+  height: 1px;
+  top: 50rpx;
+  border-top: 1px solid pink;
+}
+.icon-shoucang{
+  position: absolute;
+  right:100rpx;
+  margin-right:30rpx;
+}
+.icon-fenxiang{
+  position:absolute;
+  right:50rpx;
+}
+.content{
+  text-indent: 2em;
+  color: #666;
+  letter-spacing: 2px;
+  font-size: 24rpx;
+}
+@import "/icon/icon.wxss"

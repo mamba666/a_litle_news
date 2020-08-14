@@ -7,6 +7,29 @@ Page({
   data: {
 
   },
+  test:function(){
+    console.log("test")
+  },
+  togglePage: function () {
+    console.log("togglePage")
+    // onHide 监听页面隐藏
+    // wx.navigateTo({
+    //   url:'/pages/posts/posts'
+    // })
+    // onUnload 监听页面卸载
+    wx.redirectTo({
+      url:'/pages/posts/posts',
+      // success:function(){
+      //   console.log(1)
+      // },
+      // fail:function(){
+      //   console.log(2)
+      // },
+      // complete:function(){
+      //   console.log(3)
+      // }
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载
@@ -33,14 +56,16 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
+    console.log("onhide");
+    
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
+    console.log("onUnload");
+    
   },
 
   /**
